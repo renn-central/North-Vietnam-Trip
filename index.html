@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Solo Vietnam Trip · Nov 22–28</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#E7E2D5;--bg2:#EDEAE2;--bd:#D8D4CA;--tx:#1A1916;--t2:#5C5950;--t3:#9C998F;--gr:#1D9E75;--grb:#E6F5EF;--grt:#0F6B4F;--or:#E8892A;--orb:#FEF0E0;--bl:#3B7DD8;--blb:#EBF2FD;--pk:#D44F7A;--pkb:#FCEEF4;--red:#C0392B;--redb:#FDECEA}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--tx);font-size:14px;line-height:1.5;padding-bottom:84px}
+.hd{text-align:center;padding:26px 16px 14px}
+h1,h2{font-family:'DM Serif Display',serif;font-weight:400}
+h1{font-size:clamp(22px,5vw,30px)}h2{font-size:21px;margin-bottom:10px}h3{font-size:15px}
+.sub{color:var(--t3);font-size:13px}
+.sync{display:inline-block;font-size:12px;padding:2px 10px;border-radius:99px;background:var(--bg2);color:var(--t2);margin-top:8px}
+.sync.ok{background:var(--grb);color:var(--grt)}.sync.bad{background:var(--redb);color:var(--red)}
+.tabs{position:sticky;top:0;z-index:5;display:flex;gap:6px;overflow-x:auto;padding:10px 12px;background:var(--bg);border-bottom:1px solid var(--bd)}
+.tabs button{flex:0 0 auto;font:inherit;padding:6px 13px;border:1px solid var(--bd);background:#fff;border-radius:99px;cursor:pointer;color:var(--t2)}
+.tabs button:first-child{margin-left:auto}.tabs button:last-child{margin-right:auto}textarea{font:inherit;border:1px solid var(--bd);border-radius:8px;padding:7px 8px;background:#fff;width:100%;resize:vertical}.nt{white-space:pre-line;display:block;font-size:12px;color:var(--t2);margin-top:2px}.tabs button.on{background:var(--tx);color:#fff;border-color:var(--tx)}
+main{max-width:860px;margin:0 auto;padding:16px 12px}
+.c{background:#fff;border:1px solid var(--bd);border-radius:12px;padding:14px;margin-bottom:14px;box-shadow:0 1px 3px rgba(0,0,0,.05)}
+input,select{font:inherit;border:1px solid var(--bd);border-radius:8px;padding:7px 8px;background:#fff;min-width:0;width:100%}
+.b{font:inherit;border:1px solid var(--bd);background:#fff;border-radius:8px;padding:7px 12px;cursor:pointer;white-space:nowrap}
+.b.p{background:var(--gr);color:#fff;border-color:var(--gr)}.b.s{padding:3px 9px;font-size:12px}
+small{display:block;color:var(--t3);font-size:11px}
+.st{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-top:10px}
+.st div{background:var(--bg2);border-radius:10px;padding:10px;font-size:12px;color:var(--t2)}
+.st b{display:block;font-family:'DM Serif Display',serif;font-weight:400;font-size:20px;color:var(--tx)}
+.og{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px}
+.od{cursor:pointer;margin:0}.od:hover{border-color:var(--gr)}.od h3{margin:2px 0 6px}.od p{font-size:12px;color:var(--t2)}
+.it{display:grid;grid-template-columns:auto 84px 1fr auto;gap:8px;align-items:center;padding:9px 0;border-bottom:1px solid var(--bd)}
+.it b{font-weight:500;color:var(--grt);font-size:13px}.it.done .x,.it.done b{text-decoration:line-through;color:var(--t3)}
+.ac{display:flex;gap:4px;justify-content:flex-end}
+.ch{display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px;margin-bottom:8px}.ch span{font-size:12px;color:var(--t2)}
+.ex{display:grid;grid-template-columns:1fr 74px 98px 64px;gap:6px;align-items:center;padding:8px 0;border-bottom:1px solid var(--bd);font-size:13px}
+.exh{font-size:11px;color:var(--t3);padding:2px 0}
+.dy{font-style:normal;background:var(--bg2);border-radius:6px;padding:1px 6px;font-size:11px;color:var(--t2);margin-right:6px;white-space:nowrap}
+.over{color:var(--red);font-weight:600}
+.warn{background:var(--redb);color:var(--red);padding:8px 10px;border-radius:8px;margin-top:10px;font-size:13px}
+.af{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.af .fk{flex:1 1 120px}.af .fd{flex:0 0 96px}.af .fs{flex:1 1 150px}.af .fn,.af .fa{flex:1 1 84px}.af .fc{flex:0 0 58px}
+.wh,.wr{display:grid;grid-template-columns:1fr 1fr 1fr auto;gap:6px;margin-bottom:6px}.wh{font-size:11px;color:var(--t3)}
+.bt{width:100%;border-collapse:collapse;margin-top:12px;font-size:13px}.bt td,.bt th{padding:6px 4px;border-bottom:1px solid var(--bd);text-align:right}.bt td:first-child,.bt th:first-child{text-align:left}
+.ft{margin-top:12px;display:flex;gap:8px;flex-wrap:wrap}
+.fab{position:fixed;right:14px;bottom:14px;z-index:6;box-shadow:0 4px 12px rgba(0,0,0,.2);border-radius:99px;padding:11px 18px}
+dialog{border:none;border-radius:14px;padding:16px;max-width:440px;width:92%;margin:auto}dialog::backdrop{background:rgba(0,0,0,.35)}
+.gl{background:#FBF9F4;border:1px solid var(--bd);border-radius:20px;padding:18px;overflow-x:auto;margin-bottom:12px}
+.gh{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;padding-bottom:12px;border-bottom:1px solid var(--bd);margin-bottom:12px}
+.gh h2{font-size:28px;margin:2px 0}
+.pill{display:inline-block;background:var(--bg2);border:1px solid var(--bd);border-radius:99px;padding:3px 12px;font-size:12px;margin:0 4px 4px 0}
+.gg{display:grid;grid-template-columns:58px repeat(3,minmax(150px,1fr));gap:8px;min-width:640px}
+.gc{border-radius:12px;padding:10px 12px;cursor:pointer}.gc h4{font-size:14px;font-weight:600;margin-bottom:2px}.gc p{font-size:12px;opacity:.85}
+.gd{padding-top:8px;font-size:14px}.gd b{display:block}.gcol{font-size:11px;color:var(--t2);letter-spacing:.05em;padding:2px 4px}
+.lg{display:flex;gap:12px;flex-wrap:wrap;font-size:12px;color:var(--t2);margin-top:14px}.lg i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+.fl{display:inline-flex;gap:2px;max-width:100%}.fl .b:first-child{max-width:220px;overflow:hidden;text-overflow:ellipsis}.b.ib{width:28px;padding:3px 0;text-align:center}.af .fr{flex:1 1 150px}.af .fnote{flex:1 1 100%}.af .fty{flex:0 0 120px}
+#vw{max-width:780px}#vw a.b{text-decoration:none;color:var(--tx);display:inline-block}
+@media(max-width:600px){
+input,select,textarea{font-size:16px}
+main{padding:12px 8px}.c{padding:12px}
+.ex{grid-template-columns:1fr 58px 82px}.ex .ac{grid-column:1/-1;margin-top:-4px}.exh .ac{display:none}
+.it{grid-template-columns:auto 68px 1fr auto}.it.ed{grid-template-columns:70px 1fr}.it.ed>span:first-child{display:none}.it.ed .ac{grid-column:1/-1}
+.wh,.wr{gap:4px}.wr input{padding:7px 5px}.wh{font-size:10px}
+.gl{padding:12px}.gg{grid-template-columns:1fr;min-width:0}.gg>span,.gcol{display:none}.gc{grid-column:auto!important}.gd{display:flex;gap:6px;align-items:baseline;padding-top:10px}.gh h2{font-size:24px}
+}
+</style></head><body>
+<header class="hd"><h1>Solo Vietnam Trip</h1><div class="sub">Nov 22–28, 2026 · Cebu to Bangkok via Hanoi and Sapa</div><span class="sync" id="sync">Starting…</span></header>
+<div id="app"></div>
+<button class="b p fab" data-a="qa">+ Quick add</button>
+<dialog id="qa"><h3 style="margin-bottom:6px">Quick add expense</h3><div id="qb"></div><div class="ft"><button class="b s" data-a="qx">Close</button></div></dialog>
+<dialog id="vw"><h3 id="vt" style="margin-bottom:8px"></h3><div id="vb"></div><div class="ft"><button class="b s" data-a="vx">Close</button></div></dialog>
+<script type="module">
+import {initializeApp} from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
+import {initializeFirestore,persistentLocalCache,persistentMultipleTabManager,doc,setDoc,deleteDoc,collection,onSnapshot} from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
+const app=initializeApp({apiKey:"AIzaSyCMwbXenHIsFPTh-eiBH-RThp9GTRwdmAk",authDomain:"our-expense-in-kul-sin.firebaseapp.com",projectId:"our-expense-in-kul-sin",storageBucket:"our-expense-in-kul-sin.firebasestorage.app",messagingSenderId:"116255922833",appId:"1:116255922833:web:c8159217b02151ef303d30"});
+const db=initializeFirestore(app,{localCache:persistentLocalCache({tabManager:persistentMultipleTabManager()})});
+const ref=doc(db,"trips","vietnam-solo-2026");
+
+const $=s=>document.querySelector(s),uid=()=>Math.random().toString(36).slice(2,9),r2=n=>Math.round(n*100)/100;
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const fp=n=>n==null?'—':'₱'+Math.round(n).toLocaleString('en-US'),fd=n=>'₫'+Math.round(n).toLocaleString('en-US');
+const num=s=>{s=String(s??'').toLowerCase().replace(/[,₱₫\s]/g,'');const m=s.match(/^(\d*\.?\d+)(k|m)?$/);return m?parseFloat(m[1])*({k:1e3,m:1e6}[m[2]]||1):null};
+const DAYS=[['d22','Nov 22','Sunday'],['d23','Nov 23','Monday'],['d24','Nov 24','Tuesday'],['d25','Nov 25','Wednesday'],['d26','Nov 26','Thursday'],['d27','Nov 27','Friday'],['d28','Nov 28','Saturday']];
+const ORD=['pre',...DAYS.map(d=>d[0])];
+const HL={d22:'Cebu to Kuala Lumpur to Hanoi, then the night bus to Sapa',d23:'Sapa: Rong May Glass Bridge and Cat Cat Village',d24:'Fansipan day, then the Sapa homestay',d25:'Alpine Coaster, Moana and the night bus to Hanoi',d26:'Hanoi: Hoan Kiem, Aquarium and a movie',d27:'Joiner tour: Bai Dinh, Trang An, Hang Mua',d28:'Fly to Bangkok for the company trip'};
+const CATS={act:['Activities','--bl'],meal:['Meal/Food','--or'],tr:['Transpo','--gr'],shop:['Shopping','--pk'],acc:['Accommodation','--t2']};
+const IT={
+d22:`5:05 AM|Depart CEB
+8:55 AM|Arrive in KUL
+10:00 AM|Done clearing Immigration
+Free time|6 hours free time
+4:00 PM|Start processing Immigration
+6:10 PM|Depart KUL
+8:30 PM|Arrive in HAN
+9:30 PM|Done clearing Immigration
+10:00 PM|Pick up SIM at the airport
+11:00 PM|Bus departs from airport to Sapa`,
+d23:`6:00 AM|Arrival in Sapa
+6–7 AM|Grab coffee and bread for breakfast
+7:00 AM|Depart to Rong May Glass Bridge
+8–10 AM|Explore Rong May Bridge and play the Cloud Bridge game
+10:30 AM|Go back to Sapa Center
+11:30 AM|Grab a hearty lunch in the Center
+1:00 PM|Check in at the hotel
+2:00 PM|Freshen up
+3:00 PM|Go to Cat Cat Village and ride the Rainbow Slide
+7:00 PM|Be home and rest`,
+d24:`6:30 AM|To Sapa Station
+7:00 AM|Monorail to Fansipan
+8:00 AM|Estimated arrival at Fansipan Peak
+8–11 AM|Explore Fansipan
+11:00 AM|Depart Fansipan
+11:30 AM|Buffet lunch included in package
+1:00 PM|Check out
+3:00 PM|Check in at the Sapa Homestay (1-day staycation)
+3–6 PM|Relax and chill
+7–8 PM|Dinner at homestay restaurant`,
+d25:`Morning|Relax and chill in the pool
+12:00 PM|Check out by noon
+Lunch|Simple lunch at the homestay restaurant
+1:00 PM|Back to Sapa Center
+Luggage|Drop off luggage at Klook free luggage storage at the bus station
+2:00 PM|Ride the Alpine Coaster
+3–5 PM|Visit Moana Sapa
+Evening|Fancy dinner at Sapa Lake
+10:00 PM|Back at the bus station, rest in the lounge until the bus departs
+11:00 PM|Bus departs to Hanoi`,
+d26:`6:00 AM|Arrival in Hanoi
+Breakfast|Coffee shop breakfast near Hoan Kiem Lake
+8:00 AM|Drop off luggage at hotel
+9AM–12PM|Free-time Hop On-Off Bus
+12:00 PM|Lunch somewhere
+2:00 PM|Check in
+Rest|Rest
+5:00 PM|Visit Lotte World Aquarium
+Evening|Last screening of Sunrise on the Reaping`,
+d27:`7:00 AM|Hotel pickup for Joiner Tour: Bai Dinh, Trang An, Hang Mua
+Lunch|Lunch included in the tour package
+7:00 PM|Hotel drop-off`,
+d28:`7:00 AM|Free breakfast at hotel
+8:00 AM|Check out
+10:00 AM|Arrive at the airport
+12:20 PM|Depart for Bangkok
+2:12 PM|Arrive in Bangkok
+3:30 PM|Check in at the hotel
+Rest|Rest and relax
+10:00 PM|Co-workers arrive in Bangkok for the company trip`};
+const E=[['d22','meal','Lunch in KLIA 2',350],['d22','meal','Dinner in the plane',350],['d22','shop','Vietnam SIM',400],
+['d23','meal','Breakfast',350],['d23','act','Rong May + 1 game',1750],['d23','meal','Hearty lunch',500],['d23','acc','Capsule hotel',500],['d23','act','Cat Cat entrance + Rainbow Slide',500],
+['d24','act','Fansipan package',3500],['d24','acc','Staycation homestay',2000],['d24','meal','Dinner at homestay',500],
+['d25','meal','Lunch',350],['d25','act','Alpine Coaster',650],['d25','act','Moana Sapa',200],['d25','meal','Dinner at Sapa Lake',600],
+['d26','meal','Breakfast',350],['d26','act','Hop on/off bus',500],['d26','meal','Lunch',500],['d26','acc','Capsule hotel (2 nights)',1800],['d26','act','Lotte World Aquarium',650],['d26','act','Movie ticket: Sunrise on the Reaping',null],
+['d27','act','Joiner tour',3500],['d27','meal','Dinner',350],['d28','meal','Add-on lunch on the plane',300]];
+const mk=()=>({days:Object.fromEntries(Object.entries(IT).map(([k,v])=>[k,v.split('\n').map(l=>{const[t,x]=l.split('|');return{id:uid(),t,x,done:false}})])),exp:E.map(([day,cat,desc,bud])=>({id:uid(),day,cat,desc,bud,amt:null,cur:'PHP'})),wal:[]});
+const norm=d=>{d.exp=d.exp||[];d.wal=d.wal||[];d.bk=d.bk||[];return d};
+
+let S;try{S=norm(JSON.parse(localStorage.getItem('vn26')||'null')||mk())}catch(e){S=mk()}
+let lastCur=localStorage.getItem('vncur')||'PHP',ed=null,dirtyW=0;
+const todayId=()=>{const t=new Date();return t.getFullYear()==2026&&t.getMonth()==10&&t.getDate()>=22&&t.getDate()<=28?'d'+t.getDate():'pre'};
+let cur=todayId()!='pre'?todayId():'ov';
+
+const setSync=(t,c)=>{const s=$('#sync');s.textContent=t;s.className='sync '+(c||'')};
+let tm;const save=now=>{localStorage.setItem('vn26',JSON.stringify(S));clearTimeout(tm);tm=setTimeout(()=>setDoc(ref,JSON.parse(JSON.stringify(S))).catch(()=>setSync('Not saving · check Firestore rules','bad')),now?0:300)};
+
+const wt=()=>{const v=S.wal.reduce((a,w)=>a+(+w.vnd||0),0),p=S.wal.reduce((a,w)=>a+(+w.php||0),0);return{v,p,r:v&&p?v/p:null}};
+const php=(e,r)=>e.amt==null?null:e.cur==='VND'?(r?e.amt/r:null):e.amt;
+const vndSpent=()=>S.exp.filter(e=>e.cur=='VND'&&e.amt!=null).reduce((a,e)=>a+e.amt,0);
+const stat=(L,r)=>{let b=0,s=0,left=0,diff=0,miss=0;L.forEach(e=>{b+=e.bud||0;const p=php(e,r);if(e.amt==null)left+=e.bud||0;else if(p==null)miss++;else{s+=p;if(e.bud!=null)diff+=e.bud-p}});return{b,s,left,diff,miss}};
+const dn=id=>id=='pre'?'Pre-trip':DAYS.find(d=>d[0]==id)[1];
+const fi=id=>{for(const k in S.days){const x=S.days[k].find(i=>i.id==id);if(x)return[x,k]}return[]};
+
+const dayOpts=sel=>[['pre','Pre-trip'],...DAYS.map(d=>[d[0],d[1]])].map(([v,l])=>`<option value="${v}"${v==sel?' selected':''}>${l}</option>`).join('');
+const af=(cat,e)=>{e=e||{};const cu=e.cur||lastCur;return`<div class="af" data-cat="${cat||''}" data-id="${e.id||''}">${!cat?`<select class="fk">${Object.entries(CATS).map(([k,c])=>`<option value="${k}"${k==e.cat?' selected':''}>${c[0]}</option>`).join('')}</select>`:''}<select class="fd" title="Day">${dayOpts(e.day||todayId())}</select><input class="fs" placeholder="Description" value="${esc(e.desc)}"><input class="fn" inputmode="decimal" placeholder="Budget ₱" value="${e.bud??''}"><input class="fa" inputmode="decimal" placeholder="Spent" title="Tip: 150k = 150,000" value="${e.amt??''}"><select class="fc" title="Currency spent"><option value="PHP"${cu!='VND'?' selected':''}>₱</option><option value="VND"${cu=='VND'?' selected':''}>₫</option></select>${e.id?'<button class="b p s" data-a="save">Save</button><button class="b s" data-a="cancel">Cancel</button>':'<button class="b p" data-a="add">Add</button>'}</div>`};
+const read=f=>({cat:(f.querySelector('.fk')||{}).value||f.dataset.cat,day:f.querySelector('.fd').value,desc:f.querySelector('.fs').value.trim(),bud:num(f.querySelector('.fn').value),amt:num(f.querySelector('.fa').value),cur:f.querySelector('.fc').value});
+
+const itRow=(d,x)=>ed&&ed.id==x.id?`<div class="it ed" data-id="${x.id}"><span></span><input class="it-t" placeholder="Time" value="${esc(x.t)}"><div style="display:grid;gap:6px"><input class="it-x" placeholder="Activity" value="${esc(x.x)}"><textarea class="it-n" rows="3" placeholder="Note (optional): what to prepare or expect. Press Enter for a new line.">${esc(x.n)}</textarea></div><span class="ac"><button class="b p s" data-a="isave">Save</button><button class="b s" data-a="icancel">✕</button></span></div>`:`<div class="it${x.done?' done':''}"><input type="checkbox" style="width:auto" data-a="tick" data-id="${x.id}"${x.done?' checked':''}><b>${esc(x.t)}</b><span><span class="x">${esc(x.x)}</span>${x.n?`<span class="nt">📝 ${esc(x.n)}</span>`:''}</span><span class="ac"><button class="b s ib" data-a="iedit" data-id="${x.id}" title="Edit" aria-label="Edit">✎</button><button class="b s ib" data-a="idel" data-id="${x.id}">✕</button></span></div>`;
+const sp=(e,r)=>{if(e.amt==null)return'—';if(e.cur!=='VND')return fp(e.amt);return fd(e.amt)+`<small>${r?'≈'+fp(e.amt/r):'no rate yet'}</small>`};
+const row=(e,r)=>{if(ed&&ed.id==e.id)return af(null,e);const p=php(e,r),over=p!=null&&e.bud!=null&&p>e.bud;return`<div class="ex"><span><i class="dy">${dn(e.day)}</i>${esc(e.desc)}</span><span>${fp(e.bud)}</span><span class="${over?'over':''}">${sp(e,r)}</span><span class="ac"><button class="b s ib" data-a="eedit" data-id="${e.id}" title="Edit" aria-label="Edit">✎</button><button class="b s ib" data-a="edel" data-id="${e.id}">✕</button></span></div>`};
+const card=(c,r)=>{const[n,col]=CATS[c],L=S.exp.filter(e=>e.cat==c).sort((a,b)=>ORD.indexOf(a.day)-ORD.indexOf(b.day)),s=stat(L,r);return`<section class="c" style="border-left:4px solid var(${col})"><div class="ch"><h3>${n}</h3><span>Budget ${fp(s.b)} · Spent ${fp(s.s)}</span></div>${L.length?'<div class="ex exh"><span>Day · Description</span><span>Budget</span><span>Spent</span><span class="ac"></span></div>':''}${L.map(e=>row(e,r)).join('')}${af(c)}</section>`};
+const wr=(w,i)=>`<div class="wr" data-i="${i}"><input class="wv" inputmode="decimal" placeholder="₫ Withdrew" value="${w.vnd||''}"><input class="wp" inputmode="decimal" placeholder="₱ Total + fee" value="${w.php||''}"><input class="wq" inputmode="decimal" placeholder="₫ per ₱1" value="${w.rate||''}">${i>=0?'<button class="b s ib" data-a="wdel">✕</button>':'<button class="b p s" data-a="wadd">Add</button>'}</div>`;
+
+const day=(k,r)=>{const d=DAYS.find(x=>x[0]==k),L=S.days[k]||[],s=stat(S.exp.filter(e=>e.day==k),r);return`<section class="c"><h2>${d[2]}, ${d[1]}</h2><div class="sub" style="margin-bottom:6px">${HL[k]}</div>${L.map(x=>itRow(k,x)).join('')}<div class="ft"><button class="b p s" data-a="iadd" data-d="${k}">+ Add activity</button></div><p class="sub" style="margin-top:10px">Day budget ${fp(s.b)} · spent ${fp(s.s)}</p></section>`};
+const bud=r=>{const w=wt(),vs=vndSpent(),T=stat(S.exp,r);
+return`<section class="c"><h2>Cash wallet</h2><div class="wh"><span>₫ Withdrew</span><span>₱ Total (incl. fee)</span><span>Rate (₫ per ₱1)</span><span></span></div><div id="wal">${S.wal.map(wr).join('')}${wr({},-1)}</div><div class="st"><div><b>${fd(w.v)}</b>Total ₫ withdrawn</div><div><b>${fp(w.p)}</b>Total ₱ paid</div><div><b>${r?'₫'+r2(r).toLocaleString('en-US'):'—'}</b>Blended rate per ₱1</div><div><b>${fd(vs)}</b>₫ spent</div><div><b>${fd(w.v-vs)}</b>₫ cash left</div></div></section>`
++Object.keys(CATS).map(c=>card(c,r)).join('')
++`<section class="c"><h2>Total expenses</h2><div class="st"><div><b>${fp(T.b)}</b>Total budget</div><div><b>${fp(T.s)}</b>Actual spent</div><div><b>${fp(T.left)}</b>Budget still to spend</div><div class="${T.diff<0?'over':''}"><b>${fp(Math.abs(T.diff))}</b>${T.diff<0?'Over':'Under'} budget on paid items</div></div>${T.miss?`<p class="warn">${T.miss} ₫ expense(s) not counted yet. Add a withdrawal above to set the rate.</p>`:''}<table class="bt"><tr><th></th><th>Budget</th><th>Spent</th></tr>${Object.keys(CATS).map(c=>{const s=stat(S.exp.filter(e=>e.cat==c),r);return`<tr><td>${CATS[c][0]}</td><td>${fp(s.b)}</td><td>${fp(s.s)}</td></tr>`}).join('')}</table><div class="ft"><button class="b s" data-a="csv">Export CSV</button><button class="b s" data-a="json">Backup JSON</button></div></section>`};
+
+const TY={act:['#E6F5EF','#0F6B4F'],tour:['#EBF2FD','#1A4F9C'],free:['#FCEEF4','#8C1F46'],meal:['#FEF0E0','#954F0A'],trv:['#E8E5DC','#444']};
+const OV={
+d22:[[1,'trv','✈️','Fly to Kuala Lumpur','CEB 5:05 AM · arrive KUL 8:55 AM'],[1,'free','☕','Free time in KL','Immigration done 10 AM · back by 4 PM'],[1,'trv','🌙','Fly to Hanoi + night bus','KUL 6:10 PM · HAN 8:30 PM · 11 PM bus to Sapa']],
+d23:[[1,'act','🌉','Arrive Sapa · Glass Bridge','6 AM arrival · breakfast · Rong May Cloud Bridge'],[1,'act','🌈','Cat Cat Village','Hotel check-in 1 PM · Cat Cat + Rainbow Slide'],[1,'free','🛌','Rest','Back at the hotel by 7 PM']],
+d24:[[2,'act','⛰️','Fansipan Mountain','Monorail 7 AM · summit · buffet lunch included · check-out 1 PM'],[1,'meal','🍽️','Homestay dinner','Check-in 3 PM · relax · dinner 7–8 PM']],
+d25:[[1,'free','🏊','Pool morning','Relax · check-out by noon · simple lunch'],[1,'act','🎢','Alpine Coaster + Moana','Sapa Center 1 PM · coaster 2 PM · Moana 3–5 PM'],[1,'trv','🚌','Lake dinner + night bus','Dinner at Sapa Lake · bus to Hanoi 11 PM']],
+d26:[[2,'act','🚌','Arrive Hanoi · Hop On-Off Bus','6 AM arrival · Hoan Kiem coffee · bus tour 9 AM–12 PM · check-in 2 PM'],[1,'act','🐠','Aquarium + movie','Lotte Aquarium 5 PM · last screening of Sunrise on the Reaping']],
+d27:[[3,'tour','🚐','Full Day Joiner Tour · Bai Dinh → Trang An → Hang Mua','7 AM hotel pickup · lunch included · 7 PM drop-off']],
+d28:[[1,'trv','🧳','To the airport','Free hotel breakfast 7 AM · check-out 8 AM · airport 10 AM'],[1,'trv','✈️','Fly to Bangkok','HAN 12:20 PM · arrive DMK 2:12 PM'],[1,'act','🏨','Bangkok company trip','Hotel check-in 3:30 PM · co-workers arrive 10 PM']]};
+const ov=r=>{const a=stat(S.exp,r),dd=Math.round((new Date(2026,10,22)-new Date(new Date().getFullYear(),new Date().getMonth(),new Date().getDate()))/864e5),msg=dd>0?`${dd} day${dd>1?'s':''} to go`:dd>-7?`Day ${1-dd} of 7`:'Trip complete';
+return`<div class="gl"><div class="gh"><div><small style="letter-spacing:.08em">TRIP RHYTHM</small><h2>Trip at a Glance</h2><div class="sub">November 22–28, 2026 · Solo · Cebu → Kuala Lumpur → Hanoi → Sapa → Hanoi → Bangkok</div></div><div><span class="pill">${msg}</span><span class="pill"><b>7</b> days</span><span class="pill"><b>5</b> destinations</span><span class="pill">${fp(a.b)} est.</span></div></div><div class="gg"><span></span>${['Morning · 6 AM–12 PM','Afternoon · 12–5 PM','Evening · 5 PM onwards'].map(t=>`<div class="gcol">${t}</div>`).join('')}${DAYS.map(([k,dt,wd])=>`<div class="gd"><b>${dt}</b><small>${wd.slice(0,3)}</small></div>`+OV[k].map(([n,t,i,h,d])=>`<div class="gc" style="grid-column:span ${n};background:${TY[t][0]};color:${TY[t][1]}" data-a="tab" data-t="${k}"><h4>${i} ${h}</h4><p>${d}</p></div>`).join('')).join('')}</div><div class="lg">${[['act','Activity'],['tour','Full day tour'],['free','Free time'],['meal','Meal'],['trv','Travel']].map(([t,l])=>`<span><i style="background:${TY[t][0]};border:1px solid ${TY[t][1]}"></i>${l}</span>`).join('')}</div></div><div class="ft"><button class="b s" data-a="reset">Reset itinerary to original</button></div>`};
+const FILES={},TRIP='vietnam-solo-2026',BT=['Flight','Stay','Tour/Activity','Transport','Other'];
+const bf=b=>{b=b||{};return`<div class="af" data-id="${b.id||''}"><select class="fty">${BT.map(t=>`<option${t==b.type?' selected':''}>${t}</option>`).join('')}</select><select class="fd" title="Day">${dayOpts(b.day||'d22')}</select><input class="fs" placeholder="Booking name (e.g. AirAsia CEB to KUL)" value="${esc(b.title)}"><input class="fr" placeholder="Confirmation / ref no." value="${esc(b.ref)}"><textarea class="fnote" rows="2" placeholder="Notes (Enter for a new line)">${esc(b.notes)}</textarea>${b.id?'<button class="b p s" data-a="bsave">Save</button><button class="b s" data-a="cancel">Cancel</button>':'<button class="b p" data-a="badd">Add booking</button>'}</div>`};
+const readB=f=>({type:f.querySelector('.fty').value,day:f.querySelector('.fd').value,title:f.querySelector('.fs').value.trim(),ref:f.querySelector('.fr').value.trim(),notes:f.querySelector('.fnote').value.trim()});
+const bcard=b=>ed&&ed.id==b.id?`<section class="c">${bf(b)}</section>`:`<section class="c"><div class="ch"><h3>${esc(b.title)}</h3><span><i class="dy">${dn(b.day)}</i>${b.type}</span></div>${b.ref?`<div>Ref: <b>${esc(b.ref)}</b></div>`:''}${b.notes?`<div class="sub" style="white-space:pre-line">${esc(b.notes)}</div>`:''}<div class="ft">${b.files.map(f=>`<span class="fl"><button class="b s" data-a="vopen" data-id="${f.id}">${f.mime=='application/pdf'?'📄':'🖼️'} ${esc(f.name)}</button><button class="b s ib" data-a="fdel" data-id="${f.id}">✕</button></span>`).join('')}<label class="b s">+ Attach file<input type="file" hidden multiple accept="image/*,application/pdf" data-bid="${b.id}"></label></div><div class="ft"><button class="b s ib" data-a="eedit" data-id="${b.id}" title="Edit" aria-label="Edit">✎</button><button class="b s" data-a="bdel" data-id="${b.id}">Delete</button></div></section>`;
+const bk=()=>`<section class="c"><h2>Add booking</h2>${bf()}<p class="sub" style="margin-top:8px">Attach PDFs, screenshots or QR codes after adding. Images are compressed automatically. PDFs must be under 700 KB.</p></section>`+(S.bk.length?S.bk.slice().sort((a,b)=>ORD.indexOf(a.day)-ORD.indexOf(b.day)).map(bcard).join(''):'<p class="sub">No bookings yet. Add your first one above.</p>');
+const img2url=f=>new Promise((ok,no)=>{const u=URL.createObjectURL(f),i=new Image();i.onload=()=>{let s=Math.min(1,1600/Math.max(i.width,i.height)),q=.85,d;const c=document.createElement('canvas');for(;;){c.width=i.width*s;c.height=i.height*s;const x=c.getContext('2d');x.fillStyle='#fff';x.fillRect(0,0,c.width,c.height);x.drawImage(i,0,0,c.width,c.height);d=c.toDataURL('image/jpeg',q);if(d.length<9e5||s<.3)break;q>.5?q-=.1:s*=.8}URL.revokeObjectURL(u);ok(d)};i.onerror=no;i.src=u});
+const rd=f=>new Promise((ok,no)=>{const r=new FileReader();r.onload=()=>ok(r.result);r.onerror=no;r.readAsDataURL(f)});
+const attach=async(bid,files)=>{const b=S.bk.find(x=>x.id==bid);for(const f of files){try{let d,m=f.type;if(m.startsWith('image/')){d=await img2url(f);m='image/jpeg'}else if(m=='application/pdf'){if(f.size>7e5){alert(f.name+' is over 700 KB. Compress it or attach a screenshot instead.');continue}d=await rd(f)}else{alert(f.name+': only images and PDFs are supported.');continue}const id=uid();FILES[id]=d;setDoc(doc(db,'trips',TRIP,'files',id),{name:f.name,mime:m,data:d,at:Date.now()}).catch(()=>alert('Could not save '+f.name+'. Check the Firestore rules for files.'));b.files.push({id,name:f.name,mime:m})}catch(e){alert('Could not read '+f.name)}}save();render()};
+const render=()=>{const r=wt().r,tabs=[['ov','Overview'],...DAYS.map(d=>[d[0],d[1]]),['bk','Bookings'],['bud','Budget']];
+$('#app').innerHTML=`<nav class="tabs">${tabs.map(([k,l])=>`<button class="${k==cur?'on':''}" data-a="tab" data-t="${k}">${l}</button>`).join('')}</nav><main>${cur=='ov'?ov(r):cur=='bud'?bud(r):cur=='bk'?bk():day(cur,r)}</main>`};
+
+const dlf=(n,t,m)=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([t],{type:m}));a.download=n;a.click()};
+const readW=r=>{const V=num(r.querySelector('.wv').value),P=num(r.querySelector('.wp').value),Q=num(r.querySelector('.wq').value);return{vnd:V,php:P||(V&&Q?r2(V/Q):null),rate:Q||(V&&P?r2(V/P):null)}};
+const A={
+tab:e=>{cur=e.dataset.t;ed=null;render();scrollTo(0,0)},
+tick:e=>{fi(e.dataset.id)[0].done=e.checked;save();render()},
+iedit:e=>{ed={id:e.dataset.id};render()},
+icancel:()=>{const[x,k]=fi(ed.id);if(x&&!x.t&&!x.x)S.days[k]=S.days[k].filter(i=>i!==x);ed=null;render()},
+isave:e=>{const r=e.closest('.it'),[x]=fi(r.dataset.id);x.t=r.querySelector('.it-t').value.trim();x.x=r.querySelector('.it-x').value.trim();x.n=r.querySelector('.it-n').value.trim();ed=null;save();render()},
+idel:e=>{if(!confirm('Delete this activity?'))return;const[x,k]=fi(e.dataset.id);S.days[k]=S.days[k].filter(i=>i!==x);save();render()},
+iadd:e=>{const id=uid();S.days[e.dataset.d].push({id,t:'',x:'',done:false});ed={id};render()},
+reset:()=>{if(confirm('Reset the itinerary to the original plan? Your edits and ticks will be lost. Expenses stay.')){S.days=mk().days;ed=null;save();render()}},
+add:e=>{const f=e.closest('.af'),o=read(f);if(!o.desc)return alert('Add a description first.');S.exp.push({id:uid(),...o});lastCur=o.cur;localStorage.setItem('vncur',lastCur);$('#qa').close();save();render()},
+eedit:e=>{ed={id:e.dataset.id};render()},
+cancel:()=>{ed=null;render()},
+save:e=>{const o=read(e.closest('.af'));if(!o.desc)return alert('Add a description first.');Object.assign(S.exp.find(i=>i.id==ed.id),o);lastCur=o.cur;ed=null;save();render()},
+edel:e=>{if(confirm('Delete this expense?')){S.exp=S.exp.filter(i=>i.id!=e.dataset.id);save();render()}},
+wadd:e=>{const w=readW(e.closest('.wr'));if(!w.vnd||!w.php)return alert('Enter ₫ withdrawn and ₱ total (or the rate).');S.wal.push({id:uid(),...w});save();render()},
+wdel:e=>{if(confirm('Delete this withdrawal?')){S.wal.splice(+e.closest('.wr').dataset.i,1);save();render()}},
+csv:()=>{const r=wt().r,q=v=>`"${String(v??'').replace(/"/g,'""')}"`;dlf('vietnam-expenses.csv',[['Category','Day','Description','Budget PHP','Spent','Currency','Spent PHP'].map(q).join(','),...S.exp.map(e=>[CATS[e.cat][0],dn(e.day),e.desc,e.bud,e.amt,e.amt==null?'':e.cur,php(e,r)==null?'':r2(php(e,r))].map(q).join(','))].join('\n'),'text/csv')},
+json:()=>dlf('vietnam-trip-backup.json',JSON.stringify(S,null,1),'application/json'),
+qa:()=>{$('#qb').innerHTML=af(null);$('#qa').showModal()},
+vopen:async e=>{const id=e.dataset.id,f=S.bk.flatMap(b=>b.files).find(x=>x.id==id),d=FILES[id];if(!d)return alert('File is still loading. Try again in a moment.');$('#vt').textContent=f.name;let h;if(f.mime=='application/pdf'){const u=URL.createObjectURL(await (await fetch(d)).blob());h=`<iframe src="${u}" style="width:100%;height:68vh;border:0"></iframe><p class="ft"><a class="b s" href="${u}" target="_blank">Open full screen</a></p>`}else h=`<img src="${d}" style="max-width:100%;display:block;margin:auto">`;$('#vb').innerHTML=h;$('#vw').showModal()},
+vx:()=>{$('#vw').close();$('#vb').innerHTML=''},
+fdel:e=>{if(!confirm('Remove this file?'))return;const id=e.dataset.id;S.bk.forEach(b=>b.files=b.files.filter(f=>f.id!=id));delete FILES[id];deleteDoc(doc(db,'trips',TRIP,'files',id)).catch(()=>{});save();render()},
+badd:e=>{const o=readB(e.closest('.af'));if(!o.title)return alert('Add a booking name first.');S.bk.push({id:uid(),files:[],...o});save();render()},
+bsave:e=>{const o=readB(e.closest('.af')),b=S.bk.find(i=>i.id==ed.id);if(!o.title)return alert('Add a booking name first.');Object.assign(b,o);ed=null;save();render()},
+bdel:e=>{if(!confirm('Delete this booking and its files?'))return;const b=S.bk.find(i=>i.id==e.dataset.id);b.files.forEach(f=>deleteDoc(doc(db,'trips',TRIP,'files',f.id)).catch(()=>{}));S.bk=S.bk.filter(i=>i!==b);save();render()},
+qx:()=>$('#qa').close()};
+document.addEventListener('click',e=>{const t=e.target.closest('[data-a]');if(t&&A[t.dataset.a])A[t.dataset.a](t)});
+document.addEventListener('input',e=>{const t=e.target,r=t.closest('.wr');if(!r)return;const v=r.querySelector('.wv'),p=r.querySelector('.wp'),q=r.querySelector('.wq'),V=num(v.value),P=num(p.value),Q=num(q.value);
+if(t===q){if(V&&Q)p.value=r2(V/Q)}else if(V&&P)q.value=r2(V/P);else if(V&&Q)p.value=r2(V/Q)});
+document.addEventListener('change',e=>{const r=e.target.closest('.wr');if(!r||r.dataset.i<0)return;Object.assign(S.wal[+r.dataset.i],readW(r));dirtyW=1;save()});
+document.addEventListener('focusout',e=>{const rt=e.relatedTarget;if(dirtyW&&!(rt&&rt.closest&&rt.closest('.wr'))){dirtyW=0;setTimeout(render,0)}});
+
+document.addEventListener('change',e=>{const t=e.target;if(t.dataset&&t.dataset.bid&&t.files){attach(t.dataset.bid,[...t.files]);t.value=''}});
+onSnapshot(collection(db,'trips',TRIP,'files'),s=>s.docChanges().forEach(c=>c.type=='removed'?delete FILES[c.doc.id]:(FILES[c.doc.id]=c.doc.data().data)),()=>{});
+render();
+onSnapshot(ref,{includeMetadataChanges:true},s=>{
+ const m=s.metadata;
+ if(!s.exists()){if(!m.fromCache)save(true)}
+ else if(!m.hasPendingWrites){const d=s.data();if(d&&d.days){S=norm(d);localStorage.setItem('vn26',JSON.stringify(S));if(!document.activeElement?.closest?.('.af,.wr,.it'))render()}}
+ m.hasPendingWrites?setSync('Saving…'):m.fromCache?setSync(navigator.onLine?'Syncing…':'Offline · saved on this device'):setSync('✓ Synced','ok')
+},()=>setSync('Not saving · check Firestore rules','bad'));
+</script></body></html>
