@@ -89,7 +89,7 @@ const fp=n=>n==null?'—':'₱'+Math.round(n).toLocaleString('en-US'),fd=n=>'₫
 const num=s=>{s=String(s??'').toLowerCase().replace(/[,₱₫\s]/g,'');const m=s.match(/^(\d*\.?\d+)(k|m)?$/);return m?parseFloat(m[1])*({k:1e3,m:1e6}[m[2]]||1):null};
 const DAYS=[['d22','Nov 22','Sunday'],['d23','Nov 23','Monday'],['d24','Nov 24','Tuesday'],['d25','Nov 25','Wednesday'],['d26','Nov 26','Thursday'],['d27','Nov 27','Friday'],['d28','Nov 28','Saturday']];
 const ORD=['pre',...DAYS.map(d=>d[0])];
-const HL={d22:'Cebu to Kuala Lumpur to Hanoi, then the night bus to Sapa',d23:'Sapa: Rong May Glass Bridge and Cat Cat Village',d24:'Fansipan day, then the Sapa homestay',d25:'Alpine Coaster, Moana and the night bus to Hanoi',d26:'Hanoi: Hoan Kiem, Aquarium and a movie',d27:'Joiner tour: Bai Dinh, Trang An, Hang Mua',d28:'Fly to Bangkok for the company trip'};
+const HL={d22:'Cebu to Kuala Lumpur to Hanoi, then the night bus to Sapa',d23:'Sapa: Rong May Glass Bridge, Cat Cat Village and Sapa Lake',d24:'Fansipan, Alpine Coaster and the Sapa Farmstay',d25:'Moana Sapa, then the daytime bus to Hanoi',d26:'Joiner tour: Bai Dinh, Trang An, Hang Mua',d27:'Hanoi temples, Aurelia Stay and Lotte Aquarium',d28:'Fly to Bangkok for the company trip'};
 const CATS={act:['Activities','--bl'],meal:['Meal/Food','--or'],tr:['Transpo','--gr'],shop:['Shopping','--pk'],acc:['Accommodation','--t2']};
 const IT={
 d22:`5:05 AM|Depart CEB
@@ -102,48 +102,75 @@ Free time|6 hours free time
 9:30 PM|Done clearing Immigration
 10:00 PM|Pick up SIM at the airport
 11:00 PM|Bus departs from airport to Sapa`,
-d23:`6:00 AM|Arrival in Sapa
-6–7 AM|Grab coffee and bread for breakfast
-7:00 AM|Depart to Rong May Glass Bridge
-8–10 AM|Explore Rong May Bridge and play the Cloud Bridge game
-10:30 AM|Go back to Sapa Center
-11:30 AM|Grab a hearty lunch in the Center
-1:00 PM|Check in at the hotel
-2:00 PM|Freshen up
-3:00 PM|Go to Cat Cat Village and ride the Rainbow Slide
-7:00 PM|Be home and rest`,
-d24:`6:30 AM|To Sapa Station
-7:00 AM|Monorail to Fansipan
-8:00 AM|Estimated arrival at Fansipan Peak
-8–11 AM|Explore Fansipan
-11:00 AM|Depart Fansipan
-11:30 AM|Buffet lunch included in package
-1:00 PM|Check out
-3:00 PM|Check in at the Sapa Homestay (1-day staycation)
-3–6 PM|Relax and chill
-7–8 PM|Dinner at homestay restaurant`,
-d25:`Morning|Relax and chill in the pool
-12:00 PM|Check out by noon
-Lunch|Simple lunch at the homestay restaurant
-1:00 PM|Back to Sapa Center
-Luggage|Drop off luggage at Klook free luggage storage at the bus station
-2:00 PM|Ride the Alpine Coaster
-3–5 PM|Visit Moana Sapa
-Evening|Fancy dinner at Sapa Lake
-10:00 PM|Back at the bus station, rest in the lounge until the bus departs
-11:00 PM|Bus departs to Hanoi`,
-d26:`6:00 AM|Arrival in Hanoi
-Breakfast|Coffee shop breakfast near Hoan Kiem Lake
-8:00 AM|Drop off luggage at hotel
-9AM–12PM|Free-time Hop On-Off Bus
-12:00 PM|Lunch somewhere
-2:00 PM|Check in
-Rest|Rest
-5:00 PM|Visit Lotte World Aquarium
-Evening|Last screening of Sunrise on the Reaping`,
-d27:`7:00 AM|Hotel pickup for Joiner Tour: Bai Dinh, Trang An, Hang Mua
-Lunch|Lunch included in the tour package
-7:00 PM|Hotel drop-off`,
+d23:`6:00 AM|Arrive in Sapa|Arriving by overnight bus from Hanoi. Use the complimentary van drop-off service and ask to be dropped off near Sapa Lake.
+6:00–7:00 AM|Breakfast near Sapa Lake|Find an early-opening café for coffee and bread. Take some time to freshen up and enjoy the morning atmosphere.
+7:30 AM|Drop off luggage at hotel|Your hotel offers free luggage storage. Check-in is at 2 PM.
+8:00 AM|Depart for Rong May Glass Bridge|Take a GrabBike or arrange a motorcycle ride. Estimated travel time is around 28 minutes.
+8:30–9:00 AM|Arrive at Rong May Glass Bridge|Allow some time for ticketing and getting ready before exploring.
+9:00–11:30 AM|Explore Rong May Glass Bridge|Enjoy the experience above the clouds during the earlier part of the morning, then take in the mountain views as visibility improves. Weather permitting!
+11:30 AM|Depart for Cat Cat Village|Estimated motorcycle travel time is around 40 minutes.
+12:30 PM|Arrive at Cat Cat Village|Begin exploring the village and enjoy the scenery.
+1:00–2:00 PM|Lunch at Cat Cat Village|Have lunch at a restaurant overlooking the village. Take your time, rest, and enjoy the view.
+2:00–3:30 PM onwards|Explore Cat Cat Village|Visit the waterfalls, enjoy the village scenery, and try the Rainbow Slide. No need to rush. Stay longer if you're enjoying yourself!
+3:30 PM onwards|Return to hotel|The hotel is less than 15 minutes away by motorcycle.
+2:00 PM onwards|Hotel check-in|Check in, freshen up, and take a well-deserved rest.
+7:00 PM|Explore Sapa Lake at night|Enjoy the evening atmosphere around the lake and find somewhere nearby for dinner.`,
+d24:`Before 7:00 AM|Check out of hotel|Arrange luggage storage. Pick it up later in the afternoon.
+7:00 AM|Depart for Sun Plaza|Hotel is approximately 6 minutes away by motorcycle.
+7:45 AM|Muong Hoa Mountain Railway|Take the first monorail to Hoang Lien Station.
+8:00 AM|Fansipan Cable Car|Approximately 20 minutes to Fansipan Station.
+8:30 AM onwards|Summit Funicular|Take the funicular to the summit. Target arrival is before 9 AM.
+9:00 AM–12:00 PM|Explore Fansipan Mountain|Visit the summit, 3,143-meter marker, Buddhist complex, giant Buddha statue, and viewpoints. Dress in layers because it can be cold and foggy.
+12:00 PM|Begin descent|Take the summit funicular and cable car back down.
+12:30–1:00 PM|Arrive at Hoang Lien Station|Lower cable car terminal. Van Sam Restaurant is located on the 2nd floor.
+1:00–2:00 PM|Lunch at Van Sam Restaurant|Included in your Fansipan transportation package. Restaurant operating hours: 11 AM–3 PM.
+2:00–2:30 PM|Return to Sun Plaza|Take the Muong Hoa Mountain Railway.
+2:30–3:15 PM|Alpine Coaster|Approximately 15 minutes from Sun Plaza by motorcycle. Allow time for ticketing, queues, and the ride.
+3:15–3:45 PM|Pick up luggage|Return to your hotel and collect your stored luggage.
+3:45–5:00 PM|Travel to Sapa Farmstay|Estimated 40-minute taxi ride. Allow some buffer for travel.
+5:00 PM onwards|Sapa Farmstay Staycation|Check in, enjoy your pool-view room, mountain scenery, and swimming pool. No scheduled activities. Just relax!`,
+d25:`Morning|Breakfast at Sapa Farmstay|Enjoy your complimentary breakfast and the morning mountain scenery.
+8:00–10:00 AM|Relax and enjoy the pool|Have one last dip in the pool and enjoy the property before checking out.
+11:00 AM|Check out of Sapa Farmstay|Have your luggage ready. The farmstay will help arrange your car ride back to Sapa.
+11:00–11:30 AM|Travel to Moana Sapa|Approximately 25 minutes by car. Ask the driver to drop you off at Moana since it's along the route back to Sapa center.
+11:30 AM–12:00 PM|Explore Moana Sapa|Take a few pictures and enjoy the scenery. No need to spend too much time here.
+12:00–1:00 PM|Lunch at Moana Sapa|Enjoy lunch with a scenic view before leaving Sapa.
+1:00 PM|Depart for HK Busline|Approximately 13 minutes by taxi from Moana Sapa.
+2:00 PM|Bus departure to Hanoi|Board your scheduled bus back to Hanoi.
+9:00–10:00 PM|Arrive in Hanoi|Estimated arrival time. Take advantage of the complimentary van drop-off service to your accommodation in the Old Quarter.
+10:00 PM onwards|Check in at Hanoi Railway Capsule|Settle in, unpack, and have a late dinner somewhere nearby if you're hungry.
+Night|Rest|Get some sleep and prepare for the following day.`,
+d26:`7:00 AM|Hotel pickup|Joiner tour pickup from Hanoi Railway Capsule.
+Morning|Visit Bai Dinh Pagoda|Explore the temple complex as part of your organized tour.
+Midday|Lunch buffet|Lunch is included in your tour package.
+Afternoon|Trang An & Hang Mua|Continue with the scheduled tour activities. Enjoy the scenery and take plenty of pictures!
+7:00 PM|Return to Hanoi|Estimated hotel drop-off time.
+7:00–8:00 PM|Rest and freshen up|Take a break after the long day. Decide whether you still have the energy to go out.
+8:00 PM onwards|Dinner / Train Street|If you're feeling energetic and there's a suitable train schedule, head to Train Street for a café visit and light dinner. Otherwise, order food to your hotel or find somewhere nearby.
+Late evening|Return to hotel|Relax and get some rest.`,
+d27:`7:30 AM|Check out of Hanoi Railway Capsule|Arrange luggage storage and confirm you'll collect your bags around 2 PM.
+7:30–7:45 AM|Travel to Tran Quoc Pagoda|Approximately 7 minutes by GrabBike.
+7:45–8:25 AM|Tran Quoc Pagoda|Free entrance. Enjoy the pagoda and West Lake scenery.
+8:25–8:40 AM|Walk to Quan Thanh Temple|Approximately 12 minutes on foot.
+8:40–9:10 AM|Quan Thanh Temple|Entrance: 10,000 VND. Explore the courtyard and the famous bronze statue.
+9:10–9:20 AM|Walk to Presidential Palace|Approximately 8 minutes on foot.
+9:20–10:05 AM|Presidential Palace historical grounds|Entrance: 25,000 VND. Visit the grounds, stilt house, and surrounding gardens.
+10:05–10:15 AM|Walk to One Pillar Pagoda|Approximately 7 minutes on foot.
+10:15–10:35 AM|One Pillar Pagoda|Estimated entrance: 25,000 VND. Take pictures and explore the iconic pagoda.
+10:35–10:45 AM|GrabBike to Temple of Literature|Approximately 5–10 minutes.
+10:45–11:45 AM|Temple of Literature|Entrance: 70,000 VND. Explore the courtyards and historic university grounds.
+11:45 AM–12:00 PM|GrabBike to Ngoc Son Temple|Approximately 9 minutes.
+12:00–12:40 PM|Ngoc Son Temple|Entrance: 50,000 VND. Visit the temple and walk across the iconic red bridge.
+12:40–1:30 PM|Lunch|Find a restaurant near Hoan Kiem Lake or the Old Quarter.
+1:30–1:45 PM|Return to Hanoi Railway Capsule|Approximately 6 minutes by GrabBike, based on your map estimate.
+1:45–2:00 PM|Collect luggage|Pick up your stored suitcase and prepare for the transfer.
+2:00–2:45 PM|Travel to Hanoi Aurelia Stay|Approximately 30 minutes by car. Allow extra time for traffic.
+3:00 PM|Check-in|Settle into your Deluxe Studio with City View and Queen Bed.
+3:00–6:00 PM|Relax and settle in|Unpack, enjoy the apartment, and start your laundry.
+6:00 PM|Head to Lotte Mall West Lake|GrabBike to the mall for dinner.
+6:30–7:45 PM|Dinner and mall exploration|Have a quick meal before visiting the aquarium.
+8:00–10:00 PM|Lotte World Aquarium|Enjoy your final major activity in Vietnam!
+10:00 PM onwards|Return to the apartment|Relax, finish preparing your luggage, and get some rest.`,
 d28:`7:00 AM|Free breakfast at hotel
 8:00 AM|Check out
 10:00 AM|Arrive at the airport
@@ -158,8 +185,8 @@ const E=[['d22','meal','Lunch in KLIA 2',350],['d22','meal','Dinner in the plane
 ['d25','meal','Lunch',350],['d25','act','Alpine Coaster',650],['d25','act','Moana Sapa',200],['d25','meal','Dinner at Sapa Lake',600],
 ['d26','meal','Breakfast',350],['d26','act','Hop on/off bus',500],['d26','meal','Lunch',500],['d26','acc','Capsule hotel (2 nights)',1800],['d26','act','Lotte World Aquarium',650],['d26','act','Movie ticket: Sunrise on the Reaping',null],
 ['d27','act','Joiner tour',3500],['d27','meal','Dinner',350],['d28','meal','Add-on lunch on the plane',300]];
-const mk=()=>({days:Object.fromEntries(Object.entries(IT).map(([k,v])=>[k,v.split('\n').map(l=>{const[t,x]=l.split('|');return{id:uid(),t,x,done:false}})])),exp:E.map(([day,cat,desc,bud])=>({id:uid(),day,cat,desc,bud,amt:null,cur:'PHP'})),wal:[]});
-const norm=d=>{d.exp=d.exp||[];d.wal=d.wal||[];d.bk=d.bk||[];return d};
+const mk=()=>({days:Object.fromEntries(Object.entries(IT).map(([k,v])=>[k,v.split('\n').map(l=>{const[t,x,n]=l.split('|');return{id:uid(),t,x,n:n||'',done:false}})])),exp:E.map(([day,cat,desc,bud])=>({id:uid(),day,cat,desc,bud,amt:null,cur:'PHP'})),wal:[]});
+let migd=0;const norm=d=>{d.exp=d.exp||[];d.wal=d.wal||[];d.bk=d.bk||[];d.days=d.days||{};if((d.itv||0)<2){const f=mk().days;['d23','d24','d25','d26','d27'].forEach(k=>d.days[k]=f[k]);d.itv=2;migd=1}return d};
 
 let S;try{S=norm(JSON.parse(localStorage.getItem('vn26')||'null')||mk())}catch(e){S=mk()}
 let lastCur=localStorage.getItem('vncur')||'PHP',ed=null,dirtyW=0;
@@ -195,11 +222,11 @@ return`<section class="c"><h2>Cash wallet</h2><div class="wh"><span>₫ Withdrew
 const TY={act:['#E6F5EF','#0F6B4F'],tour:['#EBF2FD','#1A4F9C'],free:['#FCEEF4','#8C1F46'],meal:['#FEF0E0','#954F0A'],trv:['#E8E5DC','#444']};
 const OV={
 d22:[[1,'trv','✈️','Fly to Kuala Lumpur','CEB 5:05 AM · arrive KUL 8:55 AM'],[1,'free','☕','Free time in KL','Immigration done 10 AM · back by 4 PM'],[1,'trv','🌙','Fly to Hanoi + night bus','KUL 6:10 PM · HAN 8:30 PM · 11 PM bus to Sapa']],
-d23:[[1,'act','🌉','Arrive Sapa · Glass Bridge','6 AM arrival · breakfast · Rong May Cloud Bridge'],[1,'act','🌈','Cat Cat Village','Hotel check-in 1 PM · Cat Cat + Rainbow Slide'],[1,'free','🛌','Rest','Back at the hotel by 7 PM']],
-d24:[[2,'act','⛰️','Fansipan Mountain','Monorail 7 AM · summit · buffet lunch included · check-out 1 PM'],[1,'meal','🍽️','Homestay dinner','Check-in 3 PM · relax · dinner 7–8 PM']],
-d25:[[1,'free','🏊','Pool morning','Relax · check-out by noon · simple lunch'],[1,'act','🎢','Alpine Coaster + Moana','Sapa Center 1 PM · coaster 2 PM · Moana 3–5 PM'],[1,'trv','🚌','Lake dinner + night bus','Dinner at Sapa Lake · bus to Hanoi 11 PM']],
-d26:[[2,'act','🚌','Arrive Hanoi · Hop On-Off Bus','6 AM arrival · Hoan Kiem coffee · bus tour 9 AM–12 PM · check-in 2 PM'],[1,'act','🐠','Aquarium + movie','Lotte Aquarium 5 PM · last screening of Sunrise on the Reaping']],
-d27:[[3,'tour','🚐','Full Day Joiner Tour · Bai Dinh → Trang An → Hang Mua','7 AM hotel pickup · lunch included · 7 PM drop-off']],
+d23:[[1,'act','🌉','Rong May Glass Bridge','Arrive Sapa 6 AM · breakfast by Sapa Lake · glass bridge 9–11:30 AM'],[1,'act','🌈','Cat Cat Village','Lunch with a view · waterfalls · Rainbow Slide · hotel check-in 2 PM'],[1,'free','🌙','Sapa Lake at night','Evening stroll and dinner near the lake from 7 PM']],
+d24:[[1,'act','⛰️','Fansipan Mountain','Monorail 7:45 AM · cable car · summit 9 AM–12 PM'],[1,'act','🎢','Van Sam lunch + Alpine Coaster','Lunch 1 PM (included) · coaster 2:30 PM · pick up luggage'],[1,'free','🏡','Sapa Farmstay','Taxi 3:45 PM (~40 min) · check in 5 PM · pool-view room']],
+d25:[[1,'free','🏊','Farmstay pool morning','Breakfast · last dip 8–10 AM · check-out 11 AM'],[1,'act','🏞️','Moana Sapa + lunch','Explore 11:30 AM · lunch · taxi to HK Busline 1 PM · bus 2 PM'],[1,'trv','🚌','Arrive in Hanoi','9–10 PM · van drop-off · check in at Hanoi Railway Capsule']],
+d26:[[3,'tour','🚐','Full Day Joiner Tour · Bai Dinh → Trang An → Hang Mua','7 AM hotel pickup · lunch buffet included · back ~7 PM · optional Train Street dinner']],
+d27:[[1,'act','🛕','Hanoi temple walk','Tran Quoc · Quan Thanh · Presidential Palace · One Pillar · Temple of Literature'],[1,'act','🌉','Ngoc Son + move to Aurelia Stay','Ngoc Son 12 PM · lunch · luggage · check in 3 PM'],[1,'act','🐠','Lotte Mall + Aquarium','Dinner at the mall 6 PM · Lotte World Aquarium 8–10 PM']],
 d28:[[1,'trv','🧳','To the airport','Free hotel breakfast 7 AM · check-out 8 AM · airport 10 AM'],[1,'trv','✈️','Fly to Bangkok','HAN 12:20 PM · arrive DMK 2:12 PM'],[1,'act','🏨','Bangkok company trip','Hotel check-in 3:30 PM · co-workers arrive 10 PM']]};
 const ov=r=>{const a=stat(S.exp,r),dd=Math.round((new Date(2026,10,22)-new Date(new Date().getFullYear(),new Date().getMonth(),new Date().getDate()))/864e5),msg=dd>0?`${dd} day${dd>1?'s':''} to go`:dd>-7?`Day ${1-dd} of 7`:'Trip complete';
 return`<div class="gl"><div class="gh"><div><small style="letter-spacing:.08em">TRIP RHYTHM</small><h2>Trip at a Glance</h2><div class="sub">November 22–28, 2026 · Solo · Cebu → Kuala Lumpur → Hanoi → Sapa → Hanoi → Bangkok</div></div><div><span class="pill">${msg}</span><span class="pill"><b>7</b> days</span><span class="pill"><b>5</b> destinations</span><span class="pill">${fp(a.b)} est.</span></div></div><div class="gg"><span></span>${['Morning · 6 AM–12 PM','Afternoon · 12–5 PM','Evening · 5 PM onwards'].map(t=>`<div class="gcol">${t}</div>`).join('')}${DAYS.map(([k,dt,wd])=>`<div class="gd"><b>${dt}</b><small>${wd.slice(0,3)}</small></div>`+OV[k].map(([n,t,i,h,d])=>`<div class="gc" style="grid-column:span ${n};background:${TY[t][0]};color:${TY[t][1]}" data-a="tab" data-t="${k}"><h4>${i} ${h}</h4><p>${d}</p></div>`).join('')).join('')}</div><div class="lg">${[['act','Activity'],['tour','Full day tour'],['free','Free time'],['meal','Meal'],['trv','Travel']].map(([t,l])=>`<span><i style="background:${TY[t][0]};border:1px solid ${TY[t][1]}"></i>${l}</span>`).join('')}</div></div><div class="ft"><button class="b s" data-a="reset">Reset itinerary to original</button></div>`};
@@ -221,7 +248,7 @@ const prep=async f=>{const m=f.type;if(m=='application/pdf'){if(f.size>2.5e6)thr
 const rmf=f=>{delete FILES[f.id];delete OUC[f.id];for(let i=0;i<(f.n||1);i++)deleteDoc(doc(db,'trips',TRIP,'files',f.n?f.id+'_'+i:f.id)).catch(()=>{})};
 const attach=async(bid,files,asImg)=>{const b=S.bk.find(x=>x.id==bid);for(const f of files){try{const[d,m]=await prep(f),id=uid(),n=put(id,d,m,f.name);FILES[id]=d;const meta={id,name:f.name,mime:m,n};if(asImg){if(b.img)rmf(b.img);b.img=meta;break}b.files.push(meta)}catch(e){alert(f.name+': '+(typeof e=='string'?e:'could not read this file.'))}}save();render()};
 const render=()=>{const r=wt().r,tabs=[['ov','Overview'],...DAYS.map(d=>[d[0],d[1]]),['bk','Bookings'],['bud','Budget']];
-$('#app').innerHTML=`<nav class="tabs">${tabs.map(([k,l])=>`<button class="${k==cur?'on':''}" data-a="tab" data-t="${k}">${l}</button>`).join('')}</nav><main>${cur=='ov'?ov(r):cur=='bud'?bud(r):cur=='bk'?bk():day(cur,r)}</main>`};
+$('#app').innerHTML=`<nav class="tabs">${tabs.map(([k,l])=>`<button class="${k==cur?'on':''}" data-a="tab" data-t="${k}">${l}</button>`).join('')}</nav><main>${cur=='ov'?ov(r):cur=='bud'?bud(r):cur=='bk'?bk():day(cur,r)}<p class="sub" style="text-align:center;margin-top:18px">build 2026-11-02</p></main>`};
 
 const dlf=(n,t,m)=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([t],{type:m}));a.download=n;a.click()};
 const readW=r=>{const V=num(r.querySelector('.wv').value),P=num(r.querySelector('.wp').value),Q=num(r.querySelector('.wq').value);return{vnd:V,php:P||(V&&Q?r2(V/Q):null),rate:Q||(V&&P?r2(V/P):null)}};
@@ -273,11 +300,12 @@ const mv=ev=>{y=ev.clientY;upd()};
 const iv=setInterval(()=>{if(y<70)scrollBy(0,-12);else if(y>innerHeight-70)scrollBy(0,12);upd()},16);
 const up=()=>{clearInterval(iv);h.removeEventListener('pointermove',mv);h.removeEventListener('pointerup',up);h.removeEventListener('pointercancel',up);const py=y+scrollY,ids=[...box.querySelectorAll('.bc')].filter(n=>n!==card).map(n=>({id:n.dataset.id,m:n.getBoundingClientRect().top+scrollY+n.offsetHeight/2})),at=ids.findIndex(n=>n.m>py),order=ids.map(n=>n.id);order.splice(at<0?order.length:at,0,card.dataset.id);S.bk.sort((a,b)=>order.indexOf(a.id)-order.indexOf(b.id));save();render()};
 h.addEventListener('pointermove',mv);h.addEventListener('pointerup',up);h.addEventListener('pointercancel',up)});
+if(migd){migd=0;save()}
 render();
 onSnapshot(ref,{includeMetadataChanges:true},s=>{
  const m=s.metadata;
  if(!s.exists()){if(!m.fromCache)save(true)}
- else if(!m.hasPendingWrites){const d=s.data();if(d&&d.days){S=norm(d);localStorage.setItem('vn26',JSON.stringify(S));if(!document.activeElement?.closest?.('.af,.wr,.it'))render()}}
+ else if(!m.hasPendingWrites){const d=s.data();if(d&&d.days){S=norm(d);if(migd){migd=0;save()}localStorage.setItem('vn26',JSON.stringify(S));if(!document.activeElement?.closest?.('.af,.wr,.it'))render()}}
  m.hasPendingWrites?setSync('Saving…'):m.fromCache?setSync(navigator.onLine?'Syncing…':'Offline · saved on this device'):setSync('✓ Synced','ok')
 },()=>setSync('Not saving · check Firestore rules','bad'));
 </script></body></html>
